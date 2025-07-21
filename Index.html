@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudBridge Solutions | Premier IT Services & Cloud Solutions for UK Businesses</title>
+    <meta name="description" content="Transform your business with CloudBridge Solutions. Expert IT services, cloud migration, cybersecurity, Microsoft 365, and managed IT support across the UK. Get your free consultation today.">
+    <meta name="keywords" content="IT services UK, cloud migration, Microsoft 365, cybersecurity, managed IT support, Power Platform, digital transformation, IT consulting, Manchester IT services, London IT support">
+    <meta name="author" content="CloudBridge Solutions Ltd">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="CloudBridge Solutions | Premier IT Services & Cloud Solutions">
+    <meta property="og:description" content="Transform your business with expert IT services, cloud migration, and cybersecurity solutions. Serving UK businesses with 24/7 support.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/og-image.jpg">
+    <meta property="og:site_name" content="CloudBridge Solutions">
+    <meta property="og:locale" content="en_GB">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CloudBridge Solutions | Premier IT Services & Cloud Solutions">
+    <meta name="twitter:description" content="Transform your business with expert IT services, cloud migration, and cybersecurity solutions. Serving UK businesses with 24/7 support.">
+    <meta name="twitter:image" content="./assets/twitter-image.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CloudBridge Solutions Ltd",
+        "logo": "./assets/logo.png",
+        "description": "Premier IT services and cloud transformation solutions for UK businesses",
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "GB"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "info@cloudbridgesolutions.co.uk"
+        },
+        "service": [
+            {
+                "@type": "Service",
+                "name": "Cloud Migration & Management",
+                "description": "Comprehensive cloud transformation services"
+            },
+            {
+                "@type": "Service", 
+                "name": "Cybersecurity & Compliance",
+                "description": "Advanced security solutions and compliance management"
+            },
+            {
+                "@type": "Service",
+                "name": "Microsoft 365 Services", 
+                "description": "Complete Microsoft 365 deployment and optimization"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #007AFF;
+            --secondary: #5856D6;
+            --accent: #32D74B;
+            --dark: #000000;
+            --light: #FFFFFF;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B3B3B3;
+            --gradient: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+            --btn-pink: #FF69B4;
+            --btn-green: #32D74B;
+            --btn-orange: #FF8C00;
+            --btn-blue: #007AFF;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* Animated background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, #000000, #1a1a1a, #333333, #4a4a4a, #2a2a2a);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #FFFFFF 0%, #B3B3B3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 35px;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Cloud and Bridge Logo Design */
+        .cloud-bridge-icon {
+            position: relative;
+            width: 45px;
+            height: 35px;
+        }
+
+        /* Cloud shapes */
+        .cloud-1, .cloud-2 {
+            position: absolute;
+            background: linear-gradient(135deg, #32D74B, #007AFF);
+            border-radius: 50px;
+        }
+
+        .cloud-1 {
+            width: 18px;
+            height: 12px;
+            top: 2px;
+            left: 2px;
+            box-shadow: 0 0 10px rgba(50, 215, 75, 0.3);
+        }
+
+        .cloud-2 {
+            width: 18px;
+            height: 12px;
+            top: 2px;
+            right: 2px;
+            background: linear-gradient(135deg, #FF69B4, #FF8C00);
+            box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+        }
+
+        /* Bridge connecting the clouds */
+        .bridge {
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 35px;
+            height: 3px;
+            background: linear-gradient(90deg, #32D74B, #007AFF, #FF69B4, #FF8C00);
+            border-radius: 2px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Data flow particles */
+        .data-particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: #007AFF;
+            border-radius: 50%;
+            animation: dataFlow 2s ease-in-out infinite;
+        }
+
+        .data-particle:nth-child(4) {
+            top: 17px;
+            left: 8px;
+            animation-delay: 0s;
+        }
+
+        .data-particle:nth-child(5) {
+            top: 19px;
+            left: 22px;
+            animation-delay: 0.5s;
+            background: #FF69B4;
+        }
+
+        .data-particle:nth-child(6) {
+            top: 17px;
+            right: 8px;
+            animation-delay: 1s;
+            background: #32D74B;
+        }
+
+        @keyframes dataFlow {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--text-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a.active {
+            color: var(--btn-blue);
+        }
+
+        .nav-links a.active::after {
+            width: 100%;
+            background: var(--btn-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            z-index: 10;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #FFFFFF, #B3B3B3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: textGlow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from { filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)); }
+            to { filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.6)); }
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            color: var(--text-primary);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--btn-pink);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #FFFFFF 0%, #B3B3B3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Cards */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card {
+            background: rgba(26, 26, 26, 0.8);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+            background: rgba(51, 51, 51, 0.8);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .card p {
+            opacity: 0.9;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 10000;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        .chatbot-toggle {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--btn-blue), var(--btn-pink));
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 24px;
+        }
+
+        .chatbot-toggle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .chatbot-window {
+            position: absolute;
+            bottom: 80px;
+            right: 0;
+            width: 350px;
+            height: 450px;
+            background: rgba(26, 26, 26, 0.95);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(20px);
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .chatbot-header {
+            background: linear-gradient(135deg, var(--btn-blue), var(--btn-pink));
+            padding: 1rem;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-messages {
+            flex: 1;
+            padding: 1rem;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .chatbot-message {
+            max-width: 80%;
+            padding: 0.75rem 1rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .chatbot-message.bot {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            align-self: flex-start;
+        }
+
+        .chatbot-message.user {
+            background: var(--btn-blue);
+            color: white;
+            align-self: flex-end;
+        }
+
+        .chatbot-input-container {
